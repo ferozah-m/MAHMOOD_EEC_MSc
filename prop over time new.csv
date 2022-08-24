@@ -1,0 +1,21 @@
+﻿day,propotion,treatment_group
+1,0.683685269,High Control
+2,0.832460115,High Control
+3,0.810712958,High Control
+4,0.790517836,High Control
+5,0.773553846,High Control
+1,0.847008547,Low Control
+2,0.823035698,Low Control
+3,0.809040903,Low Control
+4,0.821963109,Low Control
+5,0.829920025,Low Control
+1,0.72,High Imidacloprid 
+2,0.727961816,High Imidacloprid 
+3,0.670659799,High Imidacloprid 
+4,0.537779117,High Imidacloprid 
+5,0.426758669,High Imidacloprid 
+1,0.82977467,Low Imidacloprid
+2,0.877329097,Low Imidacloprid
+3,0.820029686,Low Imidacloprid
+4,0.699266192,Low Imidacloprid
+5,0.543969652,Low Imidacloprid
