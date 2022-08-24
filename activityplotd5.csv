@@ -1,0 +1,13 @@
+﻿day,Behaviour,count,treatment_group
+5,Inactive,0.01333315,High Control
+5,Active,1.37333315,High Control
+5,Brood care,1.6266665,High Control
+5,Inactive,0.0466665,Low Control
+5,Active,0.8599995,Low Control
+5,Brood care,2.08,Low Control
+5,Inactive,1.5866665,High Imidacloprid 
+5,Active,0.91333,High Imidacloprid 
+5,Brood care,0.48,High Imidacloprid 
+5,Inactive,2.4,Low Imidacloprid 
+5,Active,0.18666665,Low Imidacloprid 
+5,Brood care,0.38,Low Imidacloprid 
