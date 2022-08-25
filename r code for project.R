@@ -9,7 +9,6 @@ require(ggplot2)
 require(dplyr)
 require(tidyverse)
 library(tidyr)
-library(dplyr)
 library(lme4)
 library(sjPlot)
 library(MuMIn)
@@ -23,6 +22,8 @@ boxplot(pre_number_of_bees~treatment,data=data1)
 boxplot(post_number_of_bees~treatment,data=data1)
 boxplot(pre_brood_weight~treatment,data=data1)
 boxplot(post_brood_weight~treatment,data=data1)
+
+
 
 #BROOD TEMPERTAUTRE (H1)
 #load thermal data 
@@ -103,7 +104,7 @@ model.sel(M0, M1, M2, M3, M4, M5)
 summary(M4)
 anova(M4, test = "Chisq")
 #final propotion model
-propmodel<-glm(propotion~TREATMENT*TEMP,data=data3,family = binomial)
+propmodel<-glm(propotion~TREATMENT*TEMP,data=prop,family = binomial)
 summary(propmodel)
 anova(propmodel,test="Chisq")
 plot(propmodel) #check model diagnostics 
@@ -112,7 +113,7 @@ tab_model(propmodel)#obtain R squared and 95 Confidence Interval values
 #r sqaured is 27%
 
 #boxlplot
-ggplot(data = data3, aes(x = treatmentgroup, y=propotion)) +
+ggplot(data = prop, aes(x = treatmentgroup, y=propotion)) +
   stat_boxplot(geom ='errorbar',width=0.5)+
   geom_boxplot(fill=colours) +
   theme_classic() +
@@ -157,6 +158,8 @@ activity$active[which(activity$active > 1)] <- 3
 brood<-glm(cbind(brood,3-brood)~treatmentgroup,data=activity,family=binomial)
 summary(brood)
 tab_model(brood)
+
+#dispersion parameter for all models is high
 
 #activity graphs for day 1 and day 5
 activityplotd1<-read.csv("activityplotd1.csv", header=TRUE)
